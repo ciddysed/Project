@@ -11,6 +11,7 @@ import com.g1AppDev.KnowledgeForge.Service.CourseService;
 @RestController
 @RequestMapping("/Course")
 public class CourseController {
+
     @Autowired
     private CourseService courseService;
 
@@ -19,18 +20,16 @@ public class CourseController {
         return courseService.getAllCourses();
     }
 
-    @PostMapping("/addCourses") 
+    @PostMapping("/addCourse") 
     public Course createCourse(@RequestBody Course course) {
         return courseService.saveDetails(course);
     }
 
-    // Update course
     @PutMapping("/updateCourse/{id}")
     public Course updateCourse(@PathVariable int id, @RequestBody Course course) {
         return courseService.updateCourse(id, course);
     }
 
-    // Delete course
     @DeleteMapping("/deleteCourse/{id}")
     public String deleteCourse(@PathVariable int id) {
         return courseService.deleteCourse(id);
