@@ -20,6 +20,7 @@ import com.g1AppDev.KnowledgeForge.Service.CourseService;
 @RestController
 @RequestMapping("/Course")
 public class CourseController {
+    
     @Autowired
     private CourseService courseService;
 
