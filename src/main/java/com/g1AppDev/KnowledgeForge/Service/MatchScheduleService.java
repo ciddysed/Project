@@ -6,20 +6,22 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.g1AppDev.KnowledgeForge.Entity.MatchSchedule;
+import com.g1AppDev.KnowledgeForge.Entity.StudentSchedule;
+import com.g1AppDev.KnowledgeForge.Entity.TutorSchedule;
 import com.g1AppDev.KnowledgeForge.Repository.MatchScheduleRepo;
 public class MatchScheduleService {
     private final MatchScheduleRepo matchScheduleRepository;
 
     @Autowired
-    public ModuleService(MatchScheduleRepo matchScheduleRepository) {
+    public MatchScheduleService(MatchScheduleRepo matchScheduleRepository) {
         this.matchScheduleRepository = matchScheduleRepository;
     }
 
-    public Optional<MatchSchedule> findModuleById(int id) {
+    public Optional<MatchSchedule> findMatchScheduleById(int id) {
         return matchScheduleRepository.findById(id);
     }
 
-    public List<MatchSchedule> findAllModules() {
+    public List<MatchSchedule> findAllMatchSchedules() {
         return matchScheduleRepository.findAll();
         
     }
@@ -32,6 +34,6 @@ public class MatchScheduleService {
     }
 
     public boolean isMatched(MatchSchedule matchSchedule) {
-        return matchSchedule.getTutorSchedule().getId().equals(matchSchedule.getStudentSchedule().getId());
+        return matchSchedule.getTutorSchedule().getTutorSchedId() == matchSchedule.getStudentSchedule().getStudentSchedId();
     }
 }
