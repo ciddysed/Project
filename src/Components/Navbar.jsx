@@ -32,9 +32,10 @@ const Navbar = () => {
       </div>
       <div className="navbar-links-container">
         <Link to="/">Home</Link>
-        <Link to="/About">About</Link>
-        <Link to="/Testimonials">Testimonials</Link>
-        <Link to="/Contact">Contact</Link>
+        <Link to="/about">About</Link>
+        <Link to="/work">Work</Link>
+        <Link to="/testimonial">Testimonials</Link>
+        <Link to="/contact">Contact</Link>
       </div>
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />

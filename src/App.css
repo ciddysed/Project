@@ -33,7 +33,7 @@ nav {
   display: none;
 }
 .navbar-links-container a {
-  margin-right: 3rem;
+  margin-right: 6rem;
   text-decoration: none;
   color: black;
   font-size: 1.1rem;
@@ -263,13 +263,13 @@ nav {
 .testimonials-stars-container svg {
   margin: 0rem 0.25rem;
   font-size: 1.5rem;
-  color: #fe9e0d;
+  color: #1877F2;
 }
 .testimonial-section-bottom h2 {
   margin-top: 1.5rem;
 }
 .work-section-wrapper {
-  margin-top: 15rem;
+  margin-top: 2rem;
 }
 .work-section-top p {
   text-align: center;
