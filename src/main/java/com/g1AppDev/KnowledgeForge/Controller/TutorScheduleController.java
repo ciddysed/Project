@@ -19,9 +19,10 @@ import com.g1AppDev.KnowledgeForge.Service.TutorScheduleService;
 @RestController
 @RequestMapping("/api/tutor-schedules")
 public class TutorScheduleController {
+    @Autowired
     private final TutorScheduleService tutorScheduleService;
 
-    @Autowired
+    
     public TutorScheduleController(TutorScheduleService tutorScheduleService) {
         this.tutorScheduleService = tutorScheduleService;
     }

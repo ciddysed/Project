@@ -10,9 +10,10 @@ import com.g1AppDev.KnowledgeForge.Repository.StudentScheduleRepo;
 
 @Service
 public class StudentScheduleService {
+    @Autowired
     private final StudentScheduleRepo studentScheduleRepository;
 
-    @Autowired
+    
     public StudentScheduleService(StudentScheduleRepo studentScheduleRepository) {
         this.studentScheduleRepository = studentScheduleRepository;
     }

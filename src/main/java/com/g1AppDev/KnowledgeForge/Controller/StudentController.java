@@ -22,10 +22,10 @@ import com.g1AppDev.KnowledgeForge.Service.StudentService;
 @RestController
 @RequestMapping("/api/students")
 public class StudentController {
-
+    @Autowired
     private final StudentService studentService;
 
-    @Autowired
+    
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
     }

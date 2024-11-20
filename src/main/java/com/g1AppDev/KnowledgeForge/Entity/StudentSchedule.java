@@ -5,6 +5,7 @@ import java.util.List;
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -15,7 +16,7 @@ import jakarta.persistence.ManyToOne;
 public class StudentSchedule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "student_sched_id")
+    @Column(name = "id")
     private int studentSchedId;
 
     @ManyToOne

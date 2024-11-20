@@ -4,15 +4,19 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.g1AppDev.KnowledgeForge.Entity.MatchSchedule;
 import com.g1AppDev.KnowledgeForge.Entity.StudentSchedule;
 import com.g1AppDev.KnowledgeForge.Entity.TutorSchedule;
 import com.g1AppDev.KnowledgeForge.Repository.MatchScheduleRepo;
+
+@Service
 public class MatchScheduleService {
+    @Autowired
     private final MatchScheduleRepo matchScheduleRepository;
 
-    @Autowired
+   
     public MatchScheduleService(MatchScheduleRepo matchScheduleRepository) {
         this.matchScheduleRepository = matchScheduleRepository;
     }
