@@ -14,13 +14,14 @@ import jakarta.persistence.ManyToOne;
 
 @Entity
 public class TutorSchedule {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "tutor_sched_id")
+    @Column(name = "id")
     private int tutorSchedId;
 
     @ManyToOne
-    @JoinColumn(name = "tutor_id", nullable = false, referencedColumnName = "id")
+    @JoinColumn(name = "tutor_id", nullable = false)
     private Tutor tutor;
 
     @ElementCollection
