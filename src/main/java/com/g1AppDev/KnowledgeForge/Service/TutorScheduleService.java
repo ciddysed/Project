@@ -10,9 +10,10 @@ import com.g1AppDev.KnowledgeForge.Repository.TutorScheduleRepo;
 
 @Service
 public class TutorScheduleService {
+    @Autowired
     private final TutorScheduleRepo tutorScheduleRepo;
 
-    @Autowired
+    
     public TutorScheduleService(TutorScheduleRepo tutorScheduleRepo) {
         this.tutorScheduleRepo = tutorScheduleRepo;
     }
