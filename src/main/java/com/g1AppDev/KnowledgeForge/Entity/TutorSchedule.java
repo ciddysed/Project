@@ -20,7 +20,7 @@ public class TutorSchedule {
     private int tutorSchedId;
 
     @ManyToOne
-    @JoinColumn(name = "tutor_id", nullable = false)
+    @JoinColumn(name = "tutor_id", nullable = false, referencedColumnName = "id")
     private Tutor tutor;
 
     @ElementCollection
