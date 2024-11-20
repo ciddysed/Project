@@ -17,6 +17,9 @@ public class Course {
     @Column(name = "course_id")  // Column label for the primary key
     private int courseID;
 
+    @Column(name = "course_code", nullable = false)  // Non-nullable column
+    private String courseCode;
+
     @Column(name = "course_name", nullable = false)  // Non-nullable column
     private String courseName;
 
@@ -29,9 +32,10 @@ public class Course {
     public Course() {
     }
 
-    public Course(String courseName, Tutor tutor) {
+    public Course(String courseName, Tutor tutor, String courseCode) {
         this.courseName = courseName;
         this.tutor = tutor;
+        this.courseCode = courseCode;
     }
 
     // Getters and Setters
@@ -57,5 +61,12 @@ public class Course {
 
     public void setTutor(Tutor tutor) {
         this.tutor = tutor;
+    }
+
+    public void setCourseCode(String courseCode){
+        this.courseCode=courseCode;
+    }
+    public String getCourseCode(){
+        return courseCode;
     }
 }
