@@ -11,7 +11,7 @@ public class Tutor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "tutor_id")  // Column label for the primary key
+    @Column(name = "id")  // Column label for the primary key
     private int tutorID;
 
     @Column(name = "tutor_name", nullable = false)  // Non-nullable column
